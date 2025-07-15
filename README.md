@@ -66,7 +66,7 @@ Terraform Installed successfully
 
 <img width="602" height="85" alt="image" src="https://github.com/user-attachments/assets/a7d96fb7-2590-4034-a4cd-3858236d365e" />
 
-**Run -> terraform apply \ -var="aws_access_key=YOUR_ACCESS_KEY" \ -var="aws_secret_key=YOUR_SECRET_KEY"**
+**Run -> terraform apply -var="aws_access_key=YOUR_ACCESS_KEY" -var="aws_secret_key=YOUR_SECRET_KEY"**
 
 <img width="602" height="147" alt="image" src="https://github.com/user-attachments/assets/7f48f349-7970-423a-b5b5-71ac5b5088c5" />
 
