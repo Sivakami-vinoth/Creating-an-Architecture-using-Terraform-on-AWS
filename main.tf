@@ -5,13 +5,18 @@ provider "aws" {
 }
 
 resource "aws_instance" "firstec2" {
-  ami = "ami-053b0d53c279acc90"
+  ami = "ami-020cba7c55df1f615"
   instance_type = "t2.micro"
+  key_name="my key"
   user_data = <<-EOL
-  #!/bin/bash -xe
-  sudo apt-get update
-  sudo apt-get install apache2
+  #!/bin/bash
+  sudo apt-get update -y
+  sudo apt-get install -y apache2
+  sudo systemctl start apache2
+  sudo systemctl enable apache2
+  echo "Hello from Terraform Ubuntu EC2!" > /var/www/html/index.html
   EOL
+
   subnet_id = "${aws_subnet.first.id}"
   tags = {
       Name = "Terraform-casestudy"
